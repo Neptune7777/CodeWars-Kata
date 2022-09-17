@@ -1,10 +1,11 @@
 # Kyu 5
-def move_zeros(lst):
-    for x in range(len(lst)):
-        if lst[x] == 0:
-            lst.remove(0)
-            lst.append(0)
-    return lst
+def move_zeros(array):
+	new_array = [x for x in array if x != 0]
+	zero_count = array.count(0)
+	while zero_count > 0:
+		new_array.append(0)
+		zero_count -= 1
+	return new_array
 
 
 """
